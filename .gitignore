@@ -7,4 +7,4 @@ BEHAVIORAL_EQUIVALENCE_REPORT.md
 FINAL_AUDIT.md
 /MEMORY
 gold_standard_harness.py
-.gitignore
+gold_final.py
