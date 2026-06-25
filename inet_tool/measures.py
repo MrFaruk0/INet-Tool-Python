@@ -69,7 +69,10 @@ def measures_net(graphL, nodes_measures=True):
             for cid, comm in enumerate(communities):
                 for node in comm:
                     membership[node] = cid
-            modl = nx.community.modularity(g, communities, weight=None)
+            try:
+                modl = nx.community.modularity(g, communities, weight=None)
+            except ZeroDivisionError:
+                modl = 0.0
         else:
             modl = np.nan
 

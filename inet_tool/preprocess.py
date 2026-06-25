@@ -156,7 +156,10 @@ def construction_graph(data, perc=0.95, plot=True):
             for node in comm:
                 membership[node] = cid
 
-        mod = nx.community.modularity(g, communities, weight="weight")
+        try:
+            mod = nx.community.modularity(g, communities, weight="weight")
+        except ZeroDivisionError:
+            mod = 0.0
 
         e = g.number_of_edges()
         v = g.number_of_nodes()
