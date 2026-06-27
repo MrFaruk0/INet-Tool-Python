@@ -8,3 +8,9 @@ FINAL_AUDIT.md
 /MEMORY
 gold_standard_harness.py
 gold_final.py
+/articles
+/dataset
+analyze_gbm.py
+gbm_analysis.py
+r_gbm.R
+Rplots.pdf
